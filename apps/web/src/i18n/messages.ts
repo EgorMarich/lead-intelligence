@@ -1,0 +1,2 @@
+export const messages={ru:{nav:{dashboard:'Обзор',sales:'Sales Center',discovery:'Discovery',outreach:'Outreach',sequences:'Sequences',searches:'Поиски',leads:'Лиды',website:'Анализ сайтов',analytics:'Аналитика',revenue:'Revenue',settings:'Настройки'}},en:{nav:{dashboard:'Dashboard',sales:'Sales Center',discovery:'Discovery',outreach:'Outreach',sequences:'Sequences',searches:'Searches',leads:'Leads',website:'Website Intelligence',analytics:'Analytics',revenue:'Revenue',settings:'Settings'}}} as const;
+export type Locale=keyof typeof messages;

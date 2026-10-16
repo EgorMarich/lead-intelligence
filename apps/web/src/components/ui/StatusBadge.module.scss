@@ -1,0 +1,6 @@
+.badge { display: inline-flex; align-items: center; gap: 7px; padding: 5px 8px; border-radius: 999px; font-size: 11px; background: var(--panel-2); color: var(--muted); }
+.badge i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.RUNNING { color: var(--accent-2); }
+.COMPLETED { color: var(--success); }
+.FAILED, .CANCELLED { color: var(--danger); }
+.PENDING { color: var(--warning); }

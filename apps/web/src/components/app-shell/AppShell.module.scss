@@ -1,0 +1,42 @@
+.shell { min-height: 100vh; display: flex; background: var(--bg); }
+.sidebar {
+  width: 246px; flex: 0 0 246px; border-right: 1px solid var(--border);
+  background: #0b0d12; padding: 18px 12px; display: flex; flex-direction: column;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-pixel); font-size: 10px; line-height: 1.6; letter-spacing: -.02em; padding: 8px 9px 26px; }
+.logo { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 6px; background: var(--accent); color: #0a0b0f; }
+.org { position: relative; padding: 0 5px 20px; }
+.orgLabel { font-size: 9px; color: var(--muted-2); letter-spacing: .13em; margin: 0 6px 7px; font-weight: 700; }
+.org select {
+  width: 100%; appearance: none; border: 1px solid var(--border); background: var(--panel);
+  color: var(--text); border-radius: 6px; padding: 10px 32px 10px 10px; outline: none; font-size: 12px;
+}
+.org select:hover { border-color: var(--border-strong); }
+.chevron { position: absolute; right: 15px; bottom: 31px; pointer-events: none; color: var(--muted); }
+.nav { display: grid; gap: 2px; }
+.navItem {
+  display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 5px;
+  color: var(--muted); font-size: 12px; font-weight: 600; border: 1px solid transparent; transition: background .16s ease, color .16s ease, border-color .16s ease;
+}
+.navItem svg { flex: 0 0 auto; }
+.navItem:hover { background: var(--panel); color: var(--text); }
+.navItem.active { background: var(--accent-soft); color: var(--accent); border-color: rgba(201,255,77,.18); }
+.language { display: flex; gap: 6px; padding: 10px 10px 4px; }
+.language button { min-width: 35px; border: 1px solid var(--border); background: transparent; color: var(--muted); border-radius: 5px; padding: 6px 7px; font-size: 9px; font-weight: 800; }
+.language button:hover { color: var(--text); border-color: var(--border-strong); }
+.account { margin-top: auto; border-top: 1px solid var(--border); padding: 14px 5px 1px; display: flex; align-items: center; gap: 9px; }
+.avatar { width: 31px; height: 31px; border-radius: 5px; display: grid; place-items: center; background: var(--panel-3); color: var(--accent); font-size: 11px; font-weight: 800; }
+.accountInfo { min-width: 0; flex: 1; display: grid; gap: 2px; }
+.accountInfo strong { font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.accountInfo span { font-size: 9px; color: var(--muted); }
+.iconButton { border: 1px solid transparent; background: transparent; color: var(--muted); padding: 6px; border-radius: 5px; }
+.iconButton:hover { color: var(--text); background: var(--panel); border-color: var(--border); }
+.main { min-width: 0; flex: 1; padding: 32px 38px 48px; }
+@media (max-width: 800px) {
+  .sidebar { width: 64px; flex-basis: 64px; padding: 14px 7px; }
+  .brand span:last-child, .org, .navItem:not(.active), .accountInfo, .language { display: none; }
+  .brand { justify-content: center; padding: 7px 0 22px; }
+  .navItem { justify-content: center; padding: 10px 7px; }
+  .account { justify-content: center; }
+  .main { padding: 24px 16px 36px; }
+}
