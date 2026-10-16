@@ -1,0 +1,21 @@
+# v0.35.3 Release Candidate Checklist
+
+- [x] ZIP integrity
+- [x] Unified version 0.35.3
+- [x] Auth membership validation
+- [x] Active organization validation
+- [x] Multi-organization refresh/switch flow
+- [x] Tenant resolution for crawl jobs and communications
+- [x] Lead activity actor id fix
+- [x] Invalid crawl input returns 400
+- [x] Production Compose version updated
+- [ ] `pnpm install --frozen-lockfile` on networked CI runner
+- [ ] API build on CI
+- [ ] Worker build on CI
+- [ ] Web build on CI
+- [ ] Docker build on CI
+- [ ] Register → login → switch org → logout smoke test
+- [ ] Discovery → search → worker → leads smoke test
+- [ ] CRM → outreach → sequence smoke test
+- [ ] YooKassa checkout/webhook smoke test with test credentials
+- [ ] PostgreSQL backup/restore drill

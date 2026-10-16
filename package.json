@@ -1,0 +1,23 @@
+{
+  "name": "lead-intelligence-backend",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "build": "pnpm --filter @lead/api build && pnpm --filter @lead/worker build",
+    "dev": "pnpm --parallel --filter @lead/api --filter @lead/worker dev",
+    "lint": "pnpm --recursive lint",
+    "test": "pnpm --recursive test",
+    "db:migrate": "pnpm --filter @lead/api migration:run",
+    "db:revert": "pnpm --filter @lead/api migration:revert",
+    "db:seed": "pnpm --filter @lead/api seed",
+    "web:dev": "pnpm --filter @lead/web dev",
+    "web:build": "pnpm --filter @lead/web build",
+    "staging:smoke": "node scripts/staging-smoke.mjs",
+    "staging:validate": "./scripts/staging-validate.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}

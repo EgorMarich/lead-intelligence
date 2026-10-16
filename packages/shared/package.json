@@ -1,0 +1,12 @@
+{
+  "name": "@lead/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "test": "jest"
+  },
+  "dependencies": {}
+}
